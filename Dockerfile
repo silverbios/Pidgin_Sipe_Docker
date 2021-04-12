@@ -9,15 +9,23 @@ RUN apt update \
     && apt remove pidgin* --purge \
     && apt full-upgrade -y \
     && apt install -y \
-	alsa-utils \
+    alsa-utils \
     dbus-x11 \
-    farstream-0.2 \ 
+    farstream-0.2 \
     gconf-service \
     hicolor-icon-theme \
+    libappindicator1 \
+    libasound2 \
     libcanberra-gtk-module \
-	libgl1-mesa-dri \
-	libgl1-mesa-glx \
-	libpulse0 \
+    libcurl3 \
+    libexif-dev \
+    libgl1-mesa-dri \
+    libgl1-mesa-glx \
+    libpango1.0 \
+    libpulse0 \
+    libv4l-0 \
+    libxss1 \
+    libxtst6 \
     pidgin \
     pidgin-sipe \
     remmina \
