@@ -3,14 +3,18 @@ FROM ubuntu:18.04
 ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt update \
-    && apt install -y software-properties-common ca-certificates procps gnupg curl apt-transport-https
-RUN add-apt-repository ppa:sipe-collab/ppa \
+    && apt install -y software-properties-common ca-certificates gnupg apt-transport-https \
+    && add-apt-repository ppa:sipe-collab/ppa \
     && add-apt-repository ppa:remmina-ppa-team/remmina-next \
     && apt remove pidgin* --purge \
     && apt full-upgrade -y \
     && apt install -y \
 	alsa-utils \
-    farstream-0.2 \
+    dbus-x11 \
+    farstream-0.2 \ 
+    gconf-service \
+    hicolor-icon-theme \
+    libcanberra-gtk-module \
 	libgl1-mesa-dri \
 	libgl1-mesa-glx \
 	libpulse0 \
@@ -37,4 +41,4 @@ WORKDIR $HOME
 USER sipe
 
 # Start Pidgin
-ENTRYPOINT ["run-pidgin-and-wait-for-exit"]
+ENTRYPOINT ["/usr/local/bin/run-pidgin-and-wait-for-exit"]
