@@ -1,0 +1,4 @@
+#!/bin/bash
+pidgin
+sleep 3
+while ps -C pidgin >/dev/null;do sleep 3;done
