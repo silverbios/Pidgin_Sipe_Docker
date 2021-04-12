@@ -24,7 +24,7 @@ RUN add-apt-repository ppa:sipe-collab/ppa \
 	--no-install-recommends \
 	&& rm -rf /var/lib/apt/lists/*
 
-COPY run-skype-and-wait-for-exit /usr/local/bin
+COPY run-pidgin-and-wait-for-exit /usr/local/bin
 
 # Make a user
 ENV HOME /home/sipe
