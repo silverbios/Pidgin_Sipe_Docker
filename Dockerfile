@@ -43,7 +43,9 @@ ENV HOME /home/sipe
 
 RUN useradd --create-home --home-dir $HOME sipe \
 	&& chown -R sipe:sipe $HOME \
-	&& usermod -a -G audio,video sipe
+	&& usermod -a -G audio,video sipe \
+    && chmod +x /usr/local/bin/run-pidgin-and-wait-for-exit
+
 
 WORKDIR $HOME
 USER sipe
