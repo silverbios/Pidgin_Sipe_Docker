@@ -1,7 +1,6 @@
 FROM debian:stable-slim
-LABEL maintainer "Jessie Frazelle <jess@linux.com>"
 
-RUN apt-get update && apt-get install -y \
+RUN apt update && apt install -y \
 	alsa-utils \
 	libasound2 \
 	libasound2-plugins \
