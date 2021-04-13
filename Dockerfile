@@ -27,6 +27,9 @@ RUN apt update \
     libxss1 \
     libxtst6 \
     pidgin \
+    pidgin-encryption \
+    pidgin-extprefs \
+    pidgin-plugin-pack \
     pidgin-sipe \
     remmina \
     remmina-plugin-rdp \
