@@ -13,7 +13,6 @@ services:
         logging:
             options:
                 max-size: 1g
-        restart: always
         devices:
             - /dev/snd
             - /dev/dri
