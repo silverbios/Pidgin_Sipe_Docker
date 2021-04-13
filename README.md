@@ -1,2 +1,1 @@
-Running Piding with Sipe Plugin over the Docker
-
+Build PulseAudio for Pidgin
