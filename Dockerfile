@@ -9,10 +9,15 @@ RUN apt update \
     && apt remove pidgin* --purge \
     && apt full-upgrade -y \
     && apt install -y \
+    alsa-base \
+    alsa-oss \
     alsa-utils \
     dbus-x11 \
     farstream-0.2 \
     gconf-service \
+    gstreamer1.0-libav \
+    gstreamer1.0-nice \
+    gstreamer1.0-plugins-ugly \
     hicolor-icon-theme \
     libappindicator1 \
     libasound2 \
@@ -21,6 +26,9 @@ RUN apt update \
     libexif-dev \
     libgl1-mesa-dri \
     libgl1-mesa-glx \
+    libgstreamer-plugins-bad1.0-0 \
+    libgstreamer-plugins-base1.0-0 \
+    libgstreamer-plugins-good1.0-0 \
     libpango1.0 \
     libpulse0 \
     libv4l-0 \
@@ -31,6 +39,7 @@ RUN apt update \
     pidgin-extprefs \
     pidgin-plugin-pack \
     pidgin-sipe \
+    pulseaudio \
     remmina \
     remmina-plugin-rdp \
     remmina-plugin-secret \
